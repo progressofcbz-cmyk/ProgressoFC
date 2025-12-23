@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progresso FC</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f2f2f2;
+}
+.header{
+    background:#ff6600;
+    color:white;
+    padding:15px;
+    text-align:center;
+    font-weight:bold;
+    font-size:20px;
+}
+.card{
+    background:white;
+    margin:12px;
+    padding:12px;
+    border-radius:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,.2);
+}
+.menu{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+}
+.menu button{
+    padding:20px;
+    border:none;
+    border-radius:10px;
+    background:#111;
+    color:white;
+    font-size:16px;
+}
+.hidden{display:none;}
+.back{
+    color:#ff6600;
+    font-weight:bold;
+    cursor:pointer;
+}
+.list-item{
+    padding:8px 0;
+    border-bottom:1px solid #ddd;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">PROGRESSO FC</div>
+
+<!-- HOME -->
+<div id="home" class="card">
+    <div class="menu">
+        <button onclick="show('fixtures')">Fixtures</button>
+        <button onclick="show('results')">Results</button>
+        <button onclick="show('lineup')">Lineup</button>
+        <button onclick="show('news')">News</button>
+        <button onclick="show('players')">Players</button>
+        <button onclick="show('table')">Standings</button>
+    </div>
+</div>
+
+<!-- FIXTURES -->
+<div id="fixtures" class="card hidden">
+    <span class="back" onclick="show('home')">← Back</span>
+    <h3>Upcoming Fixtures</h3>
+    <div class="list-item">Progresso vs Verdes – Sun 3:30 PM</div>
+    <div class="list-item">Progresso vs Port FC – Next Week</div>
+</div>
+
+<!-- RESULTS -->
+<div id="results" class="card hidden">
+    <span class="back" onclick="show('home')">← Back</span>
+    <h3>Results</h3>
+    <div class="list-item">Progresso 2 - 1 Port FC</div>
+    <div class="list-item">Progresso 1 - 1 Verdes</div>
+</div>
+
+<!-- LINEUP -->
+<div id="lineup" class="card hidden">
+    <span class="back" onclick="show('home')">← Back</span>
+    <h3>Starting XI</h3>
+    <div class="list-item">GK – Charlie Slusher</div>
+    <div class="list-item">FW – Latrell Middleton</div>
+    <div class="list-item">MF – Izon Gill</div>
+</div>
+
+<!-- NEWS -->
+<div id="news" class="card hidden">
+    <span class="back" onclick="show('home')">← Back</span>
+    <h3>Latest News</h3>
+    <div class="list-item">New striker signed for Opening Season</div>
+    <div class="list-item">Progresso prepares for Finals</div>
+</div>
+
+<!-- PLAYERS -->
+<div id="players" class="card hidden">
+    <span class="back" onclick="show('home')">← Back</span>
+    <h3>Squad</h3>
+    <div class="list-item">Latrell Middleton – Forward</div>
+    <div class="list-item">Rene Leslie – Forward</div>
+    <div class="list-item">Shaay Bowen – Midfielder</div>
+</div>
+
+<!-- TABLE -->
+<div id="table" class="card hidden">
+    <span class="back" onclick="show('home')">← Back</span>
+    <h3>League Table</h3>
+    <div class="list-item">1. Progresso FC</div>
+    <div class="list-item">2. Verdes FC</div>
+    <div class="list-item">3. Port FC</div>
+</div>
+
+<script>
+function show(id){
+    document.querySelectorAll('.card').forEach(d=>d.classList.add('hidden'));
+    document.getElementById(id).classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
