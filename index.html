@@ -74,8 +74,20 @@ input{width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid #c
 <button onclick="show('feed')">Social</button>
 <button onclick="show('tickets')">Tickets</button>
 <button onclick="show('roster')">Team Roster</button>
+<button onclick="show('shop')">Shop</button>
+
 
 </div>
+<hr style="border:none;border-top:1px solid #ddd;margin:14px 0">
+
+<h3 style="margin:0 0 8px 0">Latest News</h3>
+
+<div class="list-item"><b>Progresso FC:</b> New signing announced for the upcoming season.</div>
+<div class="list-item"><b>Match Day:</b> Kickoff Sunday 3:30 PM at People’s Stadium.</div>
+<div class="list-item"><b>Club Update:</b> Training schedule posted for the week.</div>
+
+<button class="buybtn" style="margin-top:10px" onclick="show('news')">View All News</button>
+
 </div>
 
 <!-- FIXTURES -->
@@ -222,6 +234,39 @@ input{width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid #c
 <img src="./powerade.png">
 <img src="./lighthouse.png">
 <img src="./Vindex.png">
+</div>
+<!-- SHOP -->
+<div id="shop" class="card hidden">
+  <span class="back" onclick="show('home')">← Back</span>
+  <h3>Progresso FC Shop</h3>
+
+  <div class="ticket">
+    <b>Home Jersey</b><br>
+    <small>Orange/White – Official Match Kit</small><br>
+    <b>Price:</b> $75.00
+    <button class="buybtn" style="margin-top:10px" onclick="alert('Added to cart (mock)!')">Add to Cart</button>
+  </div>
+
+  <div class="ticket">
+    <b>Training Shirt</b><br>
+    <small>Breathable workout top</small><br>
+    <b>Price:</b> $35.00
+    <button class="buybtn" style="margin-top:10px" onclick="alert('Added to cart (mock)!')">Add to Cart</button>
+  </div>
+
+  <div class="ticket">
+    <b>Progresso Scarf</b><br>
+    <small>Shuga City colors</small><br>
+    <b>Price:</b> $20.00
+    <button class="buybtn" style="margin-top:10px" onclick="alert('Added to cart (mock)!')">Add to Cart</button>
+  </div>
+
+  <div class="ticket">
+    <b>Progresso Cap</b><br>
+    <small>Club crest embroidered</small><br>
+    <b>Price:</b> $18.00
+    <button class="buybtn" style="margin-top:10px" onclick="alert('Added to cart (mock)!')">Add to Cart</button>
+  </div>
 </div>
 
 <script>
